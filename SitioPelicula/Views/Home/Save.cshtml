@@ -1,0 +1,69 @@
+﻿@model SitioPelicula.Models.Pelicula
+
+<h2 class="toast-header">Guardar Peliculas</h2>
+@using (Html.BeginForm("save", "home", FormMethod.Post, new { id = "popupForm" }))
+{
+    if (Model != null && Model.PeliculasID > 0)
+    {
+        @Html.HiddenFor(a => a.PeliculasID)
+    }
+
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre De la pelicula</label>
+        @Html.TextBoxFor(a => a.NombrePelicula, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.NombrePelicula)
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Genero de la pelicula</label>
+        @Html.TextBoxFor(a => a.GeneroPelicula, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.GeneroPelicula)
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Año de estreno De la Pelicula</label>
+        @Html.TextBoxFor(a => a.AñoPelicula, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.AñoPelicula)
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del pais de origen de la pelicula</label>
+        @Html.TextBoxFor(a => a.PaisPelicula, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.PaisPelicula)
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del Director</label>
+        @Html.TextBoxFor(a => a.DirectorPelicula, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.DirectorPelicula)
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del 1er Actor</label>
+        @Html.TextBoxFor(a => a.ActorPelicula1, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.ActorPelicula1)
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del 2do Actor</label>
+        @Html.TextBoxFor(a => a.ActorPelicula2, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.ActorPelicula2)
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del 3er Actor</label>
+        @Html.TextBoxFor(a => a.ActorPelicula3, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.ActorPelicula3)
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del 4to Actor</label>
+        @Html.TextBoxFor(a => a.ActorPelicula4, new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.ActorPelicula4)
+    </div>
+
+    <div>
+        <input type="submit" value="Guardar" class="btn btn-success" />
+    </div>
+}

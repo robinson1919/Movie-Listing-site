@@ -1,0 +1,55 @@
+﻿@model SitioPelicula.Models.Pelicula
+
+<h2 class="toast-header">Borrar Peliculas</h2>
+@using (Html.BeginForm("delete","home", FormMethod.Post, new { id= "popupForm" }))
+{
+    @Html.HiddenFor(a => a.PeliculasID)
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre De la pelicula</label>
+        <p>@Model.NombrePelicula</p>
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Genero de la pelicula</label>
+        <p>@Model.GeneroPelicula</p>
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Año de estreno De la Pelicula</label>
+        <p>@Model.AñoPelicula</p>
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del pais de origen de la pelicula</label>
+        <p>@Model.PaisPelicula</p>
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del Director</label>
+        <p>@Model.DirectorPelicula </p>
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del 1er Actor</label>
+        <p>@Model.ActorPelicula1 </p>
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del 2do Actor</label>
+        <p>@Model.ActorPelicula2 </p>
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del 3er Actor</label>
+        <p>@Model.ActorPelicula3 </p>
+    </div>
+
+    <div class="form-group">
+        <label style="font-weight: bold">Nombre Del 4to Actor</label>
+        <p>@Model.ActorPelicula4 </p>
+    </div>
+
+    <div>
+        <input type="submit" value="Borrar" class="btn btn-success" />
+    </div>
+}
